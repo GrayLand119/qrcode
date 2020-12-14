@@ -13,3 +13,8 @@
 ## 1.0.4
 
 * add barCode scan for iOS
+
+## 1.0.5
+
+* iOS camer permission alert dialog can be customized.
+* Permission alert dialog can jump to setting.

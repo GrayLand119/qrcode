@@ -13,6 +13,10 @@
 @property(nonatomic, strong) AVCaptureSession *session;
 @property(nonatomic, strong) FlutterMethodChannel *channel;
 @property(nonatomic, weak) AVCaptureVideoPreviewLayer *captureLayer;
+@property(nonatomic, strong) NSString *permissionAlertTitle;
+@property(nonatomic, strong) NSString *permissionAlertContent;
+@property(nonatomic, strong) NSString *permissionAlertCancelTitle;
+@property(nonatomic, strong) NSString *permissionAlertOkTitle;
 
 @end
 
@@ -31,6 +35,29 @@
         FlutterMethodChannel *channel = [FlutterMethodChannel
                                          methodChannelWithName:name
                                          binaryMessenger:registrar.messenger];
+        
+        if (args != nil &&
+            [args isKindOfClass:NSDictionary.class]) {
+            NSDictionary *dict = (NSDictionary *)args;
+            _permissionAlertTitle = dict[@"permissionAlertTitle"];
+            _permissionAlertContent = dict[@"permissionAlertContent"];
+            _permissionAlertCancelTitle = dict[@"permissionAlertCancelTitle"];
+            _permissionAlertOkTitle = dict[@"permissionAlertOkTitle"];
+        }
+        
+        if (!_permissionAlertTitle) {
+            _permissionAlertTitle = @"Prompt";
+        }
+        if (!_permissionAlertCancelTitle) {
+            _permissionAlertCancelTitle = @"Cancel";
+        }
+        if (!_permissionAlertOkTitle) {
+            _permissionAlertOkTitle = @"Go Setting";
+        }
+        if (!_permissionAlertContent) {
+            _permissionAlertContent = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"NSCameraUsageDescription"];
+        }
+        
         self.channel = channel;
         [registrar addMethodCallDelegate:self channel:channel];
         
@@ -61,10 +88,24 @@
                   [self.session startRunning];
              });
 
-        } else { 
-
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Tips" message:@"Authorization is required to use the camera, please check your permission settings: Settings> Privacy> Camera" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                [alert show];
+        } else {
+        
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:_permissionAlertTitle message:_permissionAlertContent preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alertVC addAction:[UIAlertAction actionWithTitle:_permissionAlertCancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                            
+            }]];
+            
+            [alertVC addAction:[UIAlertAction actionWithTitle:_permissionAlertOkTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication]
+                             openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+            }]];
+            
+            [UIApplication.sharedApplication.keyWindow.rootViewController presentViewController:alertVC animated:YES completion:nil];
+        
+            // Deprecated, iOS > 9.0
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:_permissionAlertTitle message:_permissionAlertContent delegate:self cancelButtonTitle:_permissionAlertCancelTitle otherButtonTitles:_permissionAlertOkTitle, nil];
+//                [alert show];
         }
     }
     return self;
@@ -97,7 +138,6 @@
 }
 
 + (void)registerWithRegistrar:(nonnull NSObject<FlutterPluginRegistrar> *)registrar {}
-
 
 - (void)resume {
     [self.session startRunning];

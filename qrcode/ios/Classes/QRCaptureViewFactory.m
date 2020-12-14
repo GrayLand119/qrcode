@@ -30,4 +30,8 @@
     return [[QRCapturePlatformView alloc] initWithFrame:frame viewIdentifier:viewId arguments:args registrar:self.registrar];
 }
 
+- (NSObject<FlutterMessageCodec> *)createArgsCodec {
+//    return FlutterJSONMessageCodec.sharedInstance;
+    return FlutterStandardMessageCodec.sharedInstance;
+}
 @end

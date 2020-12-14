@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar;
     
+- (NSObject<FlutterMessageCodec> *)createArgsCodec;
+
 @end
 
 NS_ASSUME_NONNULL_END

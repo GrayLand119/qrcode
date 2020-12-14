@@ -2,20 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8a26d51-ca25-408a-8a63-f49246f7000b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/android/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/example/qrcode/QRCaptureView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/example/qrcode/QRCaptureView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/QRCaptureView.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/QRCaptureView.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/QRCaptureViewFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/QRCaptureViewFactory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/QRCaptureViewFactory.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/QRCaptureViewFactory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/QrcodePlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/QrcodePlugin.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/qrcode.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/qrcode.podspec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/qrcode.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/qrcode.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qrcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/qrcode.iml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.dart_tool/" />
-    <ignored path="$PROJECT_DIR$/.idea/" />
-    <ignored path="$PROJECT_DIR$/.pub/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/example/.pub/" />
-    <ignored path="$PROJECT_DIR$/example/build/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,82 +30,22 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/qrcode.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="350" />
-    <option name="y" value="172" />
-    <option name="width" value="1862" />
-    <option name="height" value="984" />
-  </component>
+  <component name="ProjectId" id="1ldyZ53GnIAmm6pKaUnFs5NM0Z1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="qrcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qrcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qrcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qrcode" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qrcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qrcode" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -115,46 +60,38 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="350" y="172" width="1862" height="984" extended-state="0" />
-    <layout>
-      <window_info id="Capture Tool" />
-      <window_info id="Structure" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Build Variants" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Captures" side_tool="true" />
-      <window_info id="Resources Explorer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23956044" />
-      <window_info anchor="bottom" id="Run" />
-      <window_info anchor="bottom" id="Dart Analysis" visible="true" weight="0.21076234" />
-      <window_info anchor="bottom" id="Logcat" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Debug" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Flutter Inspector" />
-      <window_info anchor="right" id="Flutter Outline" />
-      <window_info anchor="right" id="Palette&#9;" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/qrcode.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="214" y="-950" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607941468552">
+      <screen x="-210" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="214" y="-950" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-210.-1177.1920.1177@-210.-1177.1920.1177" timestamp="1607941468552" />
+    <state x="515" y="-859" key="AndroidProcessChooserDialog" timestamp="1607942550832">
+      <screen x="-210" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="515" y="-859" key="AndroidProcessChooserDialog/0.23.1440.877/-210.-1177.1920.1177@-210.-1177.1920.1177" timestamp="1607942550832" />
+    <state width="1878" height="313" key="GridCell.Tab.0.bottom" timestamp="1607947186726">
+      <screen x="-210" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="1878" height="313" key="GridCell.Tab.0.bottom/0.23.1440.877/-210.-1177.1920.1177@-210.-1177.1920.1177" timestamp="1607947186726" />
+    <state width="1878" height="313" key="GridCell.Tab.0.center" timestamp="1607947186725">
+      <screen x="-210" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="1878" height="313" key="GridCell.Tab.0.center/0.23.1440.877/-210.-1177.1920.1177@-210.-1177.1920.1177" timestamp="1607947186725" />
+    <state width="1878" height="313" key="GridCell.Tab.0.left" timestamp="1607947186724">
+      <screen x="-210" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="1878" height="313" key="GridCell.Tab.0.left/0.23.1440.877/-210.-1177.1920.1177@-210.-1177.1920.1177" timestamp="1607947186724" />
+    <state width="1878" height="313" key="GridCell.Tab.0.right" timestamp="1607947186725">
+      <screen x="-210" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="1878" height="313" key="GridCell.Tab.0.right/0.23.1440.877/-210.-1177.1920.1177@-210.-1177.1920.1177" timestamp="1607947186725" />
+    <state x="251" y="-973" key="SettingsEditor" timestamp="1607941478767">
+      <screen x="-210" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="251" y="-973" key="SettingsEditor/0.23.1440.877/-210.-1177.1920.1177@-210.-1177.1920.1177" timestamp="1607941478767" />
+    <state x="442" y="-857" width="615" height="490" key="find.popup" timestamp="1607941855436">
+      <screen x="-210" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="442" y="-857" width="615" height="490" key="find.popup/0.23.1440.877/-210.-1177.1920.1177@-210.-1177.1920.1177" timestamp="1607941855436" />
   </component>
 </project>
