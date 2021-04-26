@@ -22,6 +22,10 @@ class QRCaptureController {
         }
       }
     });
+
+    if (_recognizeType != 0) {
+      _methodChannel?.invokeMethod('setRecognizeType', {"recognizeType":_recognizeType});
+    }
   }
 
   void pause() {
@@ -32,7 +36,9 @@ class QRCaptureController {
     _methodChannel?.invokeMethod('resume');
   }
 
+  var _recognizeType = 0;
   void setRecognizeType(int type) {
+    _recognizeType = type;
     _methodChannel?.invokeMethod('setRecognizeType', {"recognizeType":type});
   }
 

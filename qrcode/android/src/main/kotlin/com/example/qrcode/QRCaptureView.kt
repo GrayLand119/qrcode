@@ -129,6 +129,11 @@ class QRCaptureView(private val registrar: PluginRegistry.Registrar, id: Int) :
 
         val barcode = BarcodeView(registrar.activity())
 
+        if (_lastType != 0) {
+            val invertedDecoder = DefaultDecoderFactory(null, null, null, _lastType)
+            barcode.decoderFactory = invertedDecoder
+        }
+
         this.barcodeView = barcode
         barcode.decodeContinuous(
                 object : BarcodeCallback {
