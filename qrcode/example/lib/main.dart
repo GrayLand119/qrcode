@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qrcode/qrcode.dart';
 
@@ -36,6 +37,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
         _captureText = data;
       });
     });
+    _captureController.setRecognizeType(1);
 
     _animationController = AnimationController(vsync: this, duration: Duration(seconds: 1));
     _animation = AlignmentTween(begin: Alignment.topCenter, end: Alignment.bottomCenter)
@@ -98,7 +100,10 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
           ),
           Container(
             child: Text('$_captureText'),
-          )
+          ),
+          CupertinoButton(child: Text("反色模式"), onPressed: () {
+            _captureController.setRecognizeType(1);
+          })
         ],
       ),
     );

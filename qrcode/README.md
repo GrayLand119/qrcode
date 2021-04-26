@@ -1,5 +1,16 @@
+
 # qrcode
+
+BaseOn: [SiriDx - qrcode](https://github.com/SiriDx/qrcode)
+
 A flutter plugin for scanning QR codes. Use AVCaptureSession in iOS and zxing in Android.
+
+Current version: 1.0.7
+
+## What this lib modified?
+
+- Add `setRecognizeType` method to set QRCode recognize type, set `recognizeType` to 0 - defualt, 1 - inverted mode, 2 - mixed mode.
+- Add permission alert api for customize title/content/canceTitle/okTitle
 
 ## Usage
 

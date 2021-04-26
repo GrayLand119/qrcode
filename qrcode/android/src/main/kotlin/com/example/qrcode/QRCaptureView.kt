@@ -14,6 +14,7 @@ import android.hardware.Camera.CameraInfo
 import com.journeyapps.barcodescanner.BarcodeCallback
 import com.journeyapps.barcodescanner.BarcodeResult
 import com.journeyapps.barcodescanner.BarcodeView
+import com.journeyapps.barcodescanner.DefaultDecoderFactory
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
@@ -42,6 +43,13 @@ class QRCaptureView(private val registrar: PluginRegistry.Registrar, id: Int) :
         }
 
         when(call?.method){
+            "setRecognizeType" -> {
+                val type: Int = call?.argument<Int>("recognizeType") ?: 0
+                setRecognizeType(type)
+            }
+        }
+
+        when(call?.method){
             "setTorchMode" -> {
                 val isOn = call.arguments as Boolean
                 barcodeView?.setTorch(isOn);
@@ -55,6 +63,17 @@ class QRCaptureView(private val registrar: PluginRegistry.Registrar, id: Int) :
 
     private fun pause() {
         barcodeView?.pause()
+    }
+
+    var _lastType: Int = 0
+    private fun setRecognizeType (type: Int) {
+        if (_lastType != type) {
+            // 0 - default, 1 - inverted, 2 - Mixed
+            _lastType = type
+            val invertedDecoder = DefaultDecoderFactory(null, null, null, type)
+//            print("setRecognizeType: $type")
+            barcodeView?.decoderFactory = invertedDecoder
+        }
     }
 
     private fun checkAndRequestPermission(result: MethodChannel.Result?) {
@@ -109,6 +128,7 @@ class QRCaptureView(private val registrar: PluginRegistry.Registrar, id: Int) :
         checkAndRequestPermission(null)
 
         val barcode = BarcodeView(registrar.activity())
+
         this.barcodeView = barcode
         barcode.decodeContinuous(
                 object : BarcodeCallback {

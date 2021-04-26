@@ -1,8 +1,8 @@
 name: qrcode
 description: A flutter plugin for scanning QR codes. Use AVCaptureSession in iOS and zxing in Android.
-version: 1.0.6
-author: chendaxin <dxchen321@gmail.com>
-homepage: https://github.com/SiriDx/qrcode
+version: 1.0.7
+author: GrayLand119 <guilin.lan89@gmail.com>
+homepage: https://github.com/GrayLand119/qrcode
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

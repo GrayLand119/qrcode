@@ -17,6 +17,7 @@
 @property(nonatomic, strong) NSString *permissionAlertContent;
 @property(nonatomic, strong) NSString *permissionAlertCancelTitle;
 @property(nonatomic, strong) NSString *permissionAlertOkTitle;
+@property (nonatomic, assign) NSInteger recognizeType;
 
 @end
 
@@ -44,6 +45,8 @@
             _permissionAlertCancelTitle = dict[@"permissionAlertCancelTitle"];
             _permissionAlertOkTitle = dict[@"permissionAlertOkTitle"];
         }
+        
+        _recognizeType = 0;
         
         if (!_permissionAlertTitle) {
             _permissionAlertTitle = @"Prompt";
@@ -121,6 +124,9 @@
         [self pause];
     } else if ([call.method isEqualToString:@"resume"]) {
         [self resume];
+    } else if ([call.method isEqualToString:@"setRecognizeType"]) {
+        NSInteger type = (NSInteger)call.arguments[@"recognizeType"];
+        [self setRecognizeType:type];
     } else if ([call.method isEqualToString:@"setTorchMode"]) {
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         if (!device.hasTorch) {
@@ -145,6 +151,11 @@
 
 - (void)pause {
     [self.session stopRunning];
+}
+
+- (void)setRecognizeType:(NSInteger)type {
+    
+//    setRecognizeType(type)
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate

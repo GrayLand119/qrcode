@@ -32,6 +32,10 @@ class QRCaptureController {
     _methodChannel?.invokeMethod('resume');
   }
 
+  void setRecognizeType(int type) {
+    _methodChannel?.invokeMethod('setRecognizeType', {"recognizeType":type});
+  }
+
   void onCapture(CaptureCallback capture) {
     _capture = capture;
   }
